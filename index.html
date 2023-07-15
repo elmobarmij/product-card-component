@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@500;600&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: #f3eae3;
+        font-family: "Tahoma", sans-serif;
+      }
+
+      .container {
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .image,
+      .info {
+        flex-basis: 50%;
+        background-color: #fdfdfd;
+        height: 450px;
+      }
+
+      .image {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+
+      .info {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 40px;
+      }
+
+      .preview {
+        margin-top: 30px;
+        text-transform: uppercase;
+        color: #9c9c9c;
+        letter-spacing: 4px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .info-title {
+        margin-top: 10px;
+        font-size: 34px;
+        color: #1d1c1c;
+        font-weight: 400;
+        font-family: "Abril Fatface", cursive;
+        margin-bottom: 10px;
+        line-height: 1;
+        letter-spacing: 1px;
+      }
+
+      .description {
+        margin-top: 0;
+        color: #aeaeae;
+        letter-spacing: 0.5px;
+      }
+
+      .price-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .price {
+        color: #3f7f67;
+        font-size: 32px;
+        font-family: "Abril Fatface", cursive;
+      }
+
+      .del {
+        color: #9c9c9c;
+        font-size: 14px;
+      }
+
+      .CTA {
+        padding: 12px;
+        margin: 0 0 30px 0;
+        border-radius: 6px;
+        border: none;
+        color: #fff;
+        background-color: #3f7f67;
+        font-family: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.4s;
+      }
+
+      .CTA:hover {
+        background-color: #225f48;
+      }
+
+      @media (max-width: 767px) {
+        .container {
+          width: 95%;
+          height: 100vh;
+          flex-direction: column;
+          margin-top: 20px;
+          overflow: hidden;
+        }
+        .image,
+        .info {
+          width: 95%;
+        }
+        .info {
+          transform: translateY(-60px);
+          border-radius: 0px 0px 12px 12px;
+        }
+        .image {
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          overflow: hidden;
+        }
+        .price-container {
+          margin: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="image"
+        src="images/image-product-desktop.jpg"
+        alt="Gabrielle Essence Eau De Parfum"
+      />
+      <div class="info">
+        <span class="preview">Perfume</span>
+        <h2 class="info-title">Gabrielle Essence Eau De Parfum</h2>
+        <p class="description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price-container">
+          <span class="price">$149.99</span> <del class="del">$169.99</del>
+        </div>
+        <button class="CTA">
+          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+              fill="#FFF"
+            />
+          </svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
